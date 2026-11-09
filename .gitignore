@@ -1,0 +1,30 @@
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local face data and biometric embeddings
+faces/
+face_embedding.npy
+
+# Local secrets and environment settings
+.env
+.env.*
+!.env.example
+
+# Logs and test/tool caches
+*.log
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
