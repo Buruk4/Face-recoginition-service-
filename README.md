@@ -72,8 +72,4 @@ The first recognition may take longer while the face model is downloaded and loa
 - **No face is detected:** Move closer, make sure your face is lit, and remove anything blocking it.
 - **You see TensorFlow or MediaPipe warnings:** Startup warnings can be normal. If the program stops, look for the final traceback/error message.
 
-## Sharing with the team
 
-Share the project files and this README, but do not share the `.venv`/`venv` folder; each teammate should create their own environment using the steps above. The `faces` folder contains personal face images, so do not share it unless everyone pictured has agreed. Teammates can register their own faces after starting the app.
-
-The app's main settings, including the camera index and pose thresholds, are in `config.py`.
