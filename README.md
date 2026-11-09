@@ -9,11 +9,18 @@ A small Python app for registering people with a webcam and recognizing them lat
 - A working webcam
 - Internet access the first time you install packages and run recognition (DeepFace may download its ArcFace model)
 
-## Get it running
+## Clone and run it
 
-Open PowerShell in the project folder (the folder containing `main.py`), then run these commands.
+### 1. Clone the project
 
-### 1. Create and activate a virtual environment
+Open PowerShell where you want the project folder, then run:
+
+```powershell
+git clone https://github.com/Buruk4/Face-recoginition-service-.git
+cd Face-recoginition-service-
+```
+
+### 2. Create and activate a virtual environment
 
 ```powershell
 py -3.12 -m venv .venv
@@ -29,7 +36,7 @@ Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 When it is active, your prompt should start with `(.venv)`.
 
-### 2. Install the project packages
+### 3. Install the project packages
 
 ```powershell
 python -m pip install --upgrade pip
@@ -39,7 +46,7 @@ python -m pip install --force-reinstall --no-deps "opencv-contrib-python==4.11.0
 
 TensorFlow and MediaPipe need compatible protobuf versions, so keep the versions above together. DeepFace also installs a headless OpenCV package; the last command makes sure the regular (camera-window capable) OpenCV build is active.
 
-### 3. Start the app
+### 4. Start the app
 
 ```powershell
 python main.py
