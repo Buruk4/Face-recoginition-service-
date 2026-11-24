@@ -1,0 +1,18 @@
+# Machine-learning packages that are installed with --no-deps by
+# scripts/install.py.
+#
+# Why --no-deps?
+#   * DeepFace declares opencv-contrib-python-headless, while MediaPipe declares
+#     opencv-contrib-python.  Installing both distributions overwrites the same
+#     cv2 files and makes the camera preview unreliable.
+#   * MediaPipe 0.10.21 declares JAX/JAXLIB, but its Face Mesh solution never
+#     imports them.  JAX is a large dependency and current releases require
+#     NumPy 2, which conflicts with MediaPipe's NumPy < 2 requirement.
+#
+# All real runtime dependencies are listed in requirements.txt.
+#
+# RetinaFace is intentionally not installed: it imports TensorFlow at runtime,
+# and this project uses DeepFace's OpenCV detector instead (FACE_DETECTOR_BACKEND=opencv).
+
+deepface==0.0.103
+mediapipe==0.10.21
